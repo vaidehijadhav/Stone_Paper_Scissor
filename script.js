@@ -14,19 +14,23 @@ const genCompChoice = () => {
 }
 
 const drawGame = () =>{
-    console.log("Draw game");
+    // console.log("Draw game");
     msg.innerText = "Draw game";
+    msg.style.backgroundColor = "#081b31";
 }
 
 const showWinner = (userWin, userChoice, compChoice) => {
     if(userWin){
         userScore++;
-        console.log("You Win !!");
+        userScorePara.innerText = userScore;
+        // console.log("You Win !!");
         msg.innerText = `You Win !! Your ${userChoice} beats ${compChoice}`;
         msg.style.backgroundColor = "green";
     }
     else{
-        console.log("You Lose !!");
+        compScore++;
+        compScorePara.innerText = compScore;
+        // console.log("You Lose !!");
         msg.innerText = `You Lose !! ${compChoice} beats your ${userChoice}`;
         msg.style.backgroundColor = "red";
     }
